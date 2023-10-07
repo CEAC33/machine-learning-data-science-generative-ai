@@ -88,4 +88,67 @@ How many of each value are there?
 
 The MOODE is 0
 
+### Using mean, median, and modoe in Python
 
+**Mean vs. Median**
+
+Let's create some fake income data, centered around 27,000 with a normal distribution and standard deviation of 15,000, with 10,000 data points. (We'll discuss those terms more later, if you're not familiar with them.)
+
+Then, compute the mean (average) - it should be close to 27,000:
+
+```python
+import numpy as np
+
+incomes = np.random.normal(27000, 15000, 10000)
+np.mean(incomes)
+# 26933.720599154913
+```
+
+We can segment the income data into 50 buckets, and plot it as a histogram:
+
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+plt.hist(incomes, 50)
+plt.show()
+```
+
+Now compute the median - since we have a nice, even distribution it too should be close to 27,000:
+
+```python
+np.median(incomes)
+# 27092.39320043316
+```
+
+Now we'll add Jeff Bezos into the mix. Darn income inequality!
+
+```python
+incomes = np.append(incomes, [1000000000])
+```
+
+The median won't change much, but the mean does:
+
+```python
+np.median(incomes)
+#27092.571036571815
+```
+
+```python
+np.mean(incomes)
+#126921.0284963053
+```
+
+**Mode**
+
+Next, let's generate some fake age data for 500 people:
+
+```python
+ages = np.random.randint(18, high=90, size=500)
+ages
+```
+
+```python
+from scipy import stats
+stats.mode(ages)
+# ModeResult(mode=array([20]), count=array([15]))
+```
