@@ -46,3 +46,46 @@ Many Flavors of Data
   - Ratings must be 1, 2, 3, 4, or 5
   - But these values have mathematical meaning; 1 means it's a worse movie than a 2
 
+### Mean, Median, Mode
+
+**MEAN**
+
+- AKA Average
+- Sum / number of samples
+- Example:
+  - Number of children in each house on my street
+    
+0, 2, 3, 2, 1, 0, 0, 2, 0
+The MEAN is (0+2+3+2+1+0+0+2+0) / 9 = 1.11
+
+**MEDIAN**
+
+- Sort the values, and take the value at the midpoint
+- Example:
+
+0, 2, 3, 2, 1, 0, 0, 2, 0
+
+Sort it:
+
+0, 0, 0, 0, **1**, 2, 2, 2, 3
+
+- If you have an even number of samples, take the average of the two in the middle
+- Median is less susceptible to outliers than the mean
+  - Example: mean household income in the US is $72,641, but the median is only $51,939 because the mean is skewed by a handful of billionaires
+  - Median better represents the "typical" American in this example
+
+**MODE**
+
+- The most common value in a data set
+  - Not relevant to continuous numerical data
+- Back to our number of kids in each house example:
+
+0, 2, 3, 2, 1, 0, 0, 2, 0
+
+How many of each value are there?
+
+0: 4, 1: 1, 2: 3, 3: 1
+
+The MOODE is 0
+
+
